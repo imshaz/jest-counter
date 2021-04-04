@@ -31,5 +31,10 @@ test('render conter placeholder', ()=>{
   const countDisplay=  findByDataTest(wrapper, 'counter-display');
   expect(countDisplay.length).toBe(1)
 })
-test('counter start at 0', ()=>{})
+test('counter start at 0', ()=>{
+  const wrapper = setup(); 
+  const {counter} = wrapper.state();
+  expect(counter).toBe(0)
+
+})
 test('clicking button increment counter display', ()=>{})
