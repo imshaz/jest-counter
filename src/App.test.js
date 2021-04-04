@@ -37,4 +37,13 @@ test('counter start at 0', ()=>{
   expect(counter).toBe(0)
 
 })
-test('clicking button increment counter display', ()=>{})
+test('clicking button increment counter display', ()=>{
+  const wrapper=setup(); 
+  const {counter}=wrapper.state; 
+
+  const incrementBtn =findByDataTest(wrapper, 'increment-btn');
+  incrementBtn.simulate('click'); 
+  incrementBtn.simulate('click');
+  incrementBtn.simulate('click');
+  expect(wrapper.state().counter).toBe(3)
+})

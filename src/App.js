@@ -17,7 +17,9 @@ class App extends Component {
       <div data-test="app" className="App">
        <h1> Counter app </h1>
       <h3 data-test="counter-display">current counter is {counter}</h3>
-      <button data-test="increment-btn">Increment</button>     
+      <button onClick={()=>this.setState((prevState, props)=>{
+        return {counter:prevState.counter+1}
+      })} data-test="increment-btn">Increment</button>     
     </div>
   );
 }
