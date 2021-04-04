@@ -10,7 +10,7 @@ class App extends Component {
   render(){
 
     return (
-      <div className="App">
+      <div data-test="app" className="App">
        <h1> Counter app </h1>
       <div>current counter is </div>
       <button>Increment</button>
